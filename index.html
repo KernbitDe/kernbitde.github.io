@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Welcome to Our Internet Forum</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9fafb;
+      color: #222;
+    }
+    header {
+      background: linear-gradient(90deg, #3b82f6, #6366f1);
+      color: white;
+      padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0 0 0.5rem 0;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+    }
+    header p {
+      font-size: 1.25rem;
+      margin: 0;
+      opacity: 0.92;
+    }
+    section {
+      max-width: 700px;
+      margin: 2.5rem auto 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px 0 rgba(60,60,120,0.08);
+    }
+    section h2 {
+      color: #3b82f6;
+      margin-top: 0;
+      font-size: 1.6rem;
+    }
+    ul {
+      line-height: 1.7;
+      margin-top: 1rem;
+    }
+    .cta {
+      display: block;
+      margin: 2.5rem auto 0 auto;
+      padding: 0.9rem 2.5rem;
+      background: #6366f1;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.18rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: background 0.2s;
+      text-decoration: none;
+      text-align: center;
+    }
+    .cta:hover {
+      background: #3b82f6;
+    }
+    footer {
+      text-align: center;
+      padding: 1.2rem 0;
+      color: #757575;
+      background: #f1f5f9;
+      font-size: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to The Kernbit</h1>
+    <p>Your place to discuss, share, and connect on topics that matter most.</p>
+  </header>
+
+  <section>
+    <h2>What is The Kernbit?</h2>
+    <p>
+      The Kernbit is a vibrant online community where members can:
+    </p>
+    <ul>
+      <li>Ask questions and get answers from fellow members</li>
+      <li>Engage in thoughtful discussions on a wide array of topics</li>
+      <li>Share knowledge, experiences, and resources</li>
+      <li>Build meaningful connections in a safe, moderated space</li>
+    </ul>
+    <h2>Why Join Us?</h2>
+    <ul>
+      <li>Friendly, helpful, and respectful community</li>
+      <li>Easy-to-use interface for posting and replying</li>
+      <li>Regular events, Q&amp;As, and featured discussions</li>
+      <li>Support for both beginners and experts</li>
+    </ul>
+    <a href="#" class="cta">Join the Forum &rarr;</a>
+  </section>
+
+  <footer>
+    &copy; <span id="year"></span> The Kernbit. All rights reserved.
+    <script>
+      // JavaScript snippet to update the year dynamically
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
