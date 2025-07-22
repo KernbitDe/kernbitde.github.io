@@ -71,41 +71,208 @@
       font-size: 1rem;
       margin-top: 3rem;
     }
+   .berita {
+      background: white;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .berita h2 {
+      margin: 0 0 10px 0;
+      font-size: 18px;
+    }
+    .berita a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+    .berita a:hover {
+      text-decoration: underline;
+    }
+    .desc {
+      font-size: 14px;
+      color: #555;
+    }
+     .contact-section {
+  width: 100%;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3rem 1rem;
+}
+
+.contact-intro > * + * {
+  margin-top: 1rem;
+}
+
+.contact-title {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+}
+
+.contact-description {
+  color: rgb(107 114 128);
+}
+
+.form-group-container {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-textarea {
+  padding: 0.5rem;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  height: 2.5rem;
+  width: 100%;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.form-input::placeholder,
+.form-textarea:focus-visible {
+  color: #6b7280;
+}
+
+.form-input:focus-visible,
+.form-textarea:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.form-textarea {
+  min-height: 120px;
+}
+
+.form-submit {
+  width: 100%;
+  margin-top: 1.2rem;
+  background-color: #3124ca;
+  color: #fff;
+  padding: 13px 5px;
+  border-radius: 0.375rem;
+}
+
   </style>
 </head>
 <body>
   <header>
     <h1>Welcome to The Kernbit</h1>
-    <p>Your place to discuss, share, and connect on topics that matter most.</p>
+    <p>Tempat Anda untuk berdiskusi, berbagi, dan terhubung mengenai topik-topik yang paling penting.</p>
   </header>
 
   <section>
-    <h2>What is The Kernbit?</h2>
+    <h2>Apa itu Kernbit?</h2>
     <p>
-      The Kernbit is a vibrant online community where members can:
+     Komunitas online yang dinamis di mana para anggotanya dapat:
     </p>
     <ul>
-      <li>Ask questions and get answers from fellow members</li>
-      <li>Engage in thoughtful discussions on a wide array of topics</li>
-      <li>Share knowledge, experiences, and resources</li>
-      <li>Build meaningful connections in a safe, moderated space</li>
+      <li>Mengajukan pertanyaan dan mendapatkan jawaban dari sesama anggota</li>
+      <li>Terlibat dalam diskusi yang mendalam tentang berbagai topik</li>
+      <li>Berbagi pengetahuan, pengalaman, dan sumber daya</li>
+      <li>Membangun koneksi yang bermakna dalam ruang yang aman dan terpantau</li>
+
     </ul>
-    <h2>Why Join Us?</h2>
-    <ul>
-      <li>Friendly, helpful, and respectful community</li>
-      <li>Easy-to-use interface for posting and replying</li>
-      <li>Regular events, Q&amp;As, and featured discussions</li>
-      <li>Support for both beginners and experts</li>
-    </ul>
-    <a href="#" class="cta">Join the Forum &rarr;</a>
+    <h2>Top News in Indonesia</h2>
+
+  <div id="konten">Memuat berita...</div>
+
+
+  <div class="contact-intro">
+    <h2 class="contact-title">Kontak Terkewerkewer</h2>
+    <p class="contact-description">
+      Isi formulir di bawah ini dan ia akan segera menghubungi Anda.
+    </p>
+  </div>
+
+  <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+    <input type="hidden" name="access_key" value="f33333f5-a365-41a5-8cf5-cddae5ed77ba" />
+    <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
+    <input type="hidden" name="from_name" value="My Website" />
+    <!-- More custom ization options available in the docs: https://docs.web3forms.com -->
+
+    <div class="form-group-container">
+      <div class="form-group">
+        <label for="name" class="form-label">Nama</label>
+        <input id="name" name="name" class="form-input" placeholder="Your name" type="text" />
+      </div>
+      <div class="form-group">
+        <label for="email" class="form-label">Email</label>
+        <input id="email" name="email" class="form-input" placeholder="Your email" type="email" />
+      </div>
+<!--       <div class="form-group">
+        <label for="phone" class="form-label">Phone</label>
+        <input id="phone" name="phone" class="form-input" placeholder="+1 (234) 56789" type="text" />
+      </div> -->
+      <div class="form-group">
+        <label for="message" class="form-label">Pesan</label>
+        <textarea class="form-textarea" id="message" name="message" placeholder="Your message"></textarea>
+      </div>
+    </div>
+    <button class="form-submit" type="submit">Send Message</button>
+  </form>
+
+</section>
   </section>
+
 
   <footer>
     &copy; <span id="year"></span> The Kernbit. All rights reserved.
+    <!-- Javascript current year -->
     <script>
       // JavaScript snippet to update the year dynamically
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
+    <!-- Javascript news rss  -->
+    <script>
+    const rssUrl = encodeURIComponent("http://www.bbc.co.uk/indonesia/index.xml");
+    const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}`;
+
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+        const konten = document.getElementById("konten");
+        const keywordRegex = /data|korupsi|polisi/i;
+        const beritaTerkait = data.items.filter(item =>
+          keywordRegex.test(item.title + item.description)
+        );
+
+        if (beritaTerkait.length === 0) {
+          konten.innerHTML = "<p>Tidak ada berita terkait kebocoran data hari ini.</p>";
+          return;
+        }
+
+        konten.innerHTML = "";
+        beritaTerkait.forEach(item => {
+          const div = document.createElement("div");
+          div.className = "berita";
+          div.innerHTML = `
+            <h2><a href="${item.link}" target="_blank">${item.title}</a></h2>
+            <p class="desc">${item.pubDate}</p>
+            <p>${item.description}</p>
+          `;
+          konten.appendChild(div);
+        });
+      })
+      .catch(err => {
+        document.getElementById("konten").innerHTML = "<p>Gagal memuat berita.</p>";
+        console.error(err);
+      });
+  </script>
   </footer>
 </body>
 </html>
